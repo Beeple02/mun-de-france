@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Application {
+  id          String   @id @default(uuid())
+  fullName    String
+  email       String
+  institution String
+  roleApplied String
+  motivation  String   @db.Text
+  createdAt   DateTime @default(now())
+}
+
+model PartnerSchool {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  logoUrl   String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}

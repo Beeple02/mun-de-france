@@ -1,0 +1,11 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npx prisma generate && npx prisma db push && next build"
+
+[start]
+cmd = "next start"
+
+[healthcheck]
+path = "/"
+interval = 30
+timeout = 5
