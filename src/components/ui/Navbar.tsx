@@ -8,6 +8,7 @@ export default function Navbar() {
       </Link>
       <div className="flex space-x-8 text-sm uppercase tracking-wider font-semibold font-sans">
         <Link href="/organisation" className="text-institutional-slate hover:text-institutional-gold transition-colors">L&apos;Organisation</Link>
+        <Link href="/comites" className="text-institutional-slate hover:text-institutional-gold transition-colors">Comités</Link>
         <Link href="/reseau" className="text-institutional-slate hover:text-institutional-gold transition-colors">Le Réseau</Link>
         <Link href="/rejoindre" className="text-institutional-slate hover:text-institutional-gold transition-colors">Nous Rejoindre</Link>
       </div>
